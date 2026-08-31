@@ -28,7 +28,8 @@
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Cardápio</a>
+              <a class="nav-link text-white" href="#">Animais disponíveis</a>
+            <a class="nav-link text-white" href="#">Nos ajude!</a>
             </li>
           </ul>
         </div>
@@ -36,34 +37,47 @@
     </nav>
 
     <main class="container my-5">
-      <h2 class="text-center fw-bold mb-4">Nosso Cardápio</h2>
-      <!-- Grid responsivo — Aula 1 -->
+      <h2 class="text-center fw-bold mb-4">Nossos animaiszinhos</h2>
+
       <div
         class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-3"
-        id="containerPratos"
+        id="containerAnimais"
       >
-        <!-- Cards injetados pelo script.js -->
       </div>
 
       <section class="container my-5">
         <div class="row justify-content-center">
           <div class="col-12 col-md-8 col-lg-6">
-            <h2 class="text-center fw-bold mb-4">Faça seu Pedido</h2>
+            <h2 class="text-center fw-bold mb-4">Faça sua Adoção</h2>
 
             <form>
+
               <div class="mb-3">
                 <label class="form-label">Seu nome</label>
-                <input type="text" class="form-control" id="nomeCliente" />
+                <input type="text" class="form-control" id="nomeDoador" />
               </div>
+
               <div class="mb-3">
-                <label class="form-label">Prato favorito</label>
-                <select class="form-select" id="selectPrato">
-                  <option>Feijoada</option>
-                  <option>Moqueca</option>
+                <label class="form-label">Tipo de doação</label>
+                <select class="form-select" id="selectDoacao">
+                  <option>Alimento</option>
+                  <option>Roupinhas</option>
+                  <option>Brinquedos</option>
+                  <option>Dinheiro</option>
                 </select>
               </div>
-              <button type="button" class="btn btn-danger w-100" id="btnConfirmar">
-                Confirmar Pedido
+
+              <div class="mb-3">
+                <label class="form-label">Seu email</label>
+                <input type="email" class="form-control" id="emailDoador" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Telefone para contato</label>
+                <input type="tel" class="form-control" id="telefoneDoador" />
+              </div>
+              <button type="button" class="btn btn-danger w-100" id="btnEnviar">
+                Enviar solicitação de doação
               </button>
             </form>
           </div>
@@ -72,19 +86,19 @@
     </main>
 
     <!-- Modal do Bootstrap (janela popup do pedido) -->
-    <div class="modal fade" id="modalPedido" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modalAdocao" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title fw-bold" id="modalTitulo">Confirmar Pedido</h5>
+            <h5 class="modal-title fw-bold" id="modalTitulo">Confirmar Adoção</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
           </div>
           <div class="modal-body" id="modalCorpo">
-            <!-- O script.js preenche este espaço ao clicar no botão -->
           </div>
+
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-danger" id="btnConfirmarPedidoModal">Finalizar Pedido</button>
+            <button type="button" class="btn btn-danger" id="btnConfirmarPedidoModal">Finalizar adoção</button>
           </div>
         </div>
       </div>
