@@ -14,11 +14,11 @@ class Animal {
 }
 
 const animais = [
-  new Animal("Floquinho", "Cachorro", "2 anos", "", "Dócil, brincalhão e vacinado."),
-  new Animal("Chovinista", "Porco", "3 anos", "", "Muito limpinho e sociável."),
-  new Animal("Mingau", "Gato", "2 anos", "", "Calmo, adorável e castrado."),
-  new Animal("Monicão", "Cachorro", "3 anos", "", "Protetor, cheio de energia e carinhoso."),
-  new Animal("Bidu", "Cachorro", "4 anos", "", "Muito esperto, obediente e amigável.")
+  new Animal("Floquinho", "Cachorro", "2 anos", "images/floquinho.jpg", "Dócil, brincalhão e vacinado."),
+  new Animal("Chovinista", "Porco", "3 anos", "images/chovinista.jpg", "Muito limpinho e sociável."),
+  new Animal("Mingau", "Gato", "2 anos", "images/mingau.jpg", "Calmo, adorável e castrado."),
+  new Animal("Monicão", "Cachorro", "3 anos", "images/monicao.jpg", "Protetor, cheio de energia e carinhoso."),
+  new Animal("Bidu", "Cachorro", "4 anos", "images/bidu.jpg", "Muito esperto, obediente e amigável.")
 ];
 
 function criarCard(animal) {
