@@ -8,7 +8,7 @@
     <!-- Link que importa o bootstrap após a instalação -->
     <link
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css" 
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="./src/styles/style.css" />
   </head>
@@ -19,7 +19,7 @@
       <div class="container">
         <a class="navbar-brand fw-bold" href="#">🐾 ONG Patinhas Unidas</a>
         <button
-          class="navbar-toggler" 
+          class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#menu"
@@ -31,10 +31,14 @@
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-white fw-bold" href="#containerAnimais">Animais disponíveis</a>
+              <a class="nav-link text-white fw-bold" href="#containerAnimais"
+                >Animais disponíveis</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white fw-bold" href="#doacao">Nos ajude!</a>
+              <a class="nav-link text-white fw-bold" href="#doacao"
+                >Nos ajude!</a
+              >
             </li>
           </ul>
         </div>
@@ -45,8 +49,10 @@
     <main class="container my-5 pt-5">
       <h2 class="text-center fw-bold mb-4">Nossos animaizinhos</h2>
 
-      <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-3" id="containerAnimais">
-      </div>
+      <div
+        class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-3"
+        id="containerAnimais"
+      ></div>
 
       <!-- Seção de Doações -->
       <section class="container my-5" id="doacao">
@@ -58,11 +64,19 @@
             <form id="formDoacao">
               <div class="mb-3">
                 <label class="form-label" for="nomeDoador">Nome</label>
-                <input type="text" class="form-control" id="nomeDoador" placeholder="Digite seu nome completo" required />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nomeDoador"
+                  placeholder="Digite seu nome completo"
+                  required
+                />
               </div>
 
               <div class="mb-3">
-                <label class="form-label" for="selectDoacao">Tipo de doação</label>
+                <label class="form-label" for="selectDoacao"
+                  >Tipo de doação</label
+                >
                 <select class="form-select" id="selectDoacao">
                   <option>Alimento</option>
                   <option>Roupinhas</option>
@@ -72,15 +86,31 @@
               </div>
 
               <div class="mb-3">
-                <label class="form-label" for="emailDoador">Email para contato</label>
-                <input type="email" class="form-control" id="emailDoador" placeholder="seu@email.com" required />
+                <label class="form-label" for="emailDoador"
+                  >Email para contato</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailDoador"
+                  placeholder="seu@email.com"
+                  required
+                />
               </div>
 
               <div class="mb-3">
-                <label class="form-label" for="telefoneDoador">Telefone para contato</label>
-                <input type="tel" class="form-control" id="telefoneDoador" placeholder="(00) 00000-0000" required />
+                <label class="form-label" for="telefoneDoador"
+                  >Telefone para contato</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="telefoneDoador"
+                  placeholder="(00) 00000-0000"
+                  required
+                />
               </div>
-              
+
               <button type="submit" class="btn btn-danger w-100" id="btnEnviar">
                 Enviar solicitação de doação
               </button>
@@ -88,24 +118,46 @@
           </div>
         </div>
       </section>
+
+      <footer>
+        <p class="text-muted text-center">
+          ONG Patinhas Unidas - Todos os Direitos Reservados © 2026.
+        </p>
+      </footer>
     </main>
 
     <!-- Modal de Adoção -->
-    <div class="modal fade" id="modalAdocao" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modalAdocao" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title fw-bold" id="modalTitulo">Confirmar Adoção</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            <h5 class="modal-title fw-bold" id="modalTitulo">
+              Confirmar Adoção
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
           </div>
           <div class="modal-body">
             <!-- Passo 1: Informações do Pet -->
             <div id="passoInfo">
-              <img id="modalImg" src="" class="img-fluid rounded mb-3 w-100" alt="Foto do animal">
+              <img
+                id="modalImg"
+                src=""
+                class="img-fluid rounded mb-3 w-100"
+                alt="Foto do animal"
+              />
               <p><strong>Espécie:</strong> <span id="modalEspecie"></span></p>
               <p><strong>Idade:</strong> <span id="modalIdade"></span></p>
               <p><strong>Sobre:</strong> <span id="modalDescricao"></span></p>
-              <button type="button" class="btn btn-success w-100 mt-2 fw-bold" id="btnQueroAdotar">
+              <button
+                type="button"
+                class="btn btn-success w-100 mt-2 fw-bold"
+                id="btnQueroAdotar"
+              >
                 Quero adotar!
               </button>
             </div>
@@ -113,16 +165,40 @@
             <!-- Passo 2: Formulário de Adoção (Oculto inicialmente) -->
             <form id="formAdocaoModal" class="d-none">
               <div class="mb-3">
-                <label class="form-label fw-bold" for="nomeAdotante">Seu Nome</label>
-                <input type="text" class="form-control" id="nomeAdotante" placeholder="Digite seu nome completo" required>
+                <label class="form-label fw-bold" for="nomeAdotante"
+                  >Seu Nome</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nomeAdotante"
+                  placeholder="Digite seu nome completo"
+                  required
+                />
               </div>
               <div class="mb-3">
-                <label class="form-label fw-bold" for="emailAdotante">E-mail</label>
-                <input type="email" class="form-control" id="emailAdotante" placeholder="seu@email.com" required>
+                <label class="form-label fw-bold" for="emailAdotante"
+                  >E-mail</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailAdotante"
+                  placeholder="seu@email.com"
+                  required
+                />
               </div>
               <div class="mb-3">
-                <label class="form-label fw-bold" for="telAdotante">Telefone / WhatsApp</label>
-                <input type="tel" class="form-control" id="telAdotante" placeholder="(00) 00000-0000" required>
+                <label class="form-label fw-bold" for="telAdotante"
+                  >Telefone / WhatsApp</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="telAdotante"
+                  placeholder="(00) 00000-0000"
+                  required
+                />
               </div>
               <button type="submit" class="btn btn-danger w-100 fw-bold">
                 Enviar Solicitação de Adoção

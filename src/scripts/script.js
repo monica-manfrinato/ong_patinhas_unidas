@@ -14,36 +14,36 @@ const animais = [
     "Cachorro",
     "4 anos",
     "src/images/bidu.jpg",
-    "Muito esperto, obediente e amigável."
+    "Muito esperto, obediente e amigável.",
   ),
   new Animal(
     "Chovinista",
     "Porquinho",
     "3 anos",
     "src/images/chovinista.jpg",
-    "Muito limpinho e sociável."
+    "Muito limpinho e sociável.",
   ),
   new Animal(
     "Floquinho",
     "Cachorro",
     "2 anos",
     "src/images/floquinho.jpg",
-    "Dócil, brincalhão e vacinado."
+    "Dócil, brincalhão e vacinado.",
   ),
   new Animal(
     "Mingau",
     "Gato",
     "2 anos",
     "src/images/mingau.jpg",
-    "Calmo, adorável e castrado."
+    "Calmo, adorável e castrado.",
   ),
   new Animal(
     "Monicão",
     "Cachorro",
     "3 anos",
     "src/images/monicao.jpg",
-    "Protetor, cheio de energia e carinhoso."
-  )
+    "Protetor, cheio de energia e carinhoso.",
+  ),
 ];
 
 let animalSelecionado = null;
@@ -76,13 +76,15 @@ function criarCard(animal) {
   const btnInfo = card.querySelector(".btn-detalhes");
   btnInfo.addEventListener("click", () => {
     animalSelecionado = animal;
-    document.querySelector("#modalTitulo").innerText = `Conheça o(a) ${animal.nome}`;
+    document.querySelector("#modalTitulo").innerText =
+      `Conheça o(a) ${animal.nome}`;
     document.querySelector("#modalImg").src = animal.imagem;
     document.querySelector("#modalImg").alt = animal.nome;
     document.querySelector("#modalEspecie").innerText = animal.especie;
     document.querySelector("#modalIdade").innerText = animal.idade;
     document.querySelector("#modalDescricao").innerText = animal.descricao;
-    document.querySelector("#btnQueroAdotar").innerText = `Quero adotar o(a) ${animal.nome}!`;
+    document.querySelector("#btnQueroAdotar").innerText =
+      `Quero adotar o(a) ${animal.nome}!`;
   });
 
   col.appendChild(card);
@@ -100,7 +102,8 @@ const btnQueroAdotar = document.querySelector("#btnQueroAdotar");
 if (btnQueroAdotar) {
   btnQueroAdotar.addEventListener("click", () => {
     if (animalSelecionado) {
-      document.querySelector("#modalTitulo").innerText = `Formulário de Adoção - ${animalSelecionado.nome}`;
+      document.querySelector("#modalTitulo").innerText =
+        `Formulário de Adoção - ${animalSelecionado.nome}`;
     }
     document.querySelector("#passoInfo").classList.add("d-none");
     document.querySelector("#formAdocaoModal").classList.remove("d-none");
@@ -113,7 +116,9 @@ if (formAdocaoModal) {
   formAdocaoModal.addEventListener("submit", (e) => {
     e.preventDefault();
     const nomeAnimal = animalSelecionado ? animalSelecionado.nome : "pet";
-    alert(`Obrigado! A solicitação para adotar o(a) ${nomeAnimal} foi enviada. Aguarde retorno da Patinhas Unidas!`);
+    alert(
+      `Obrigado! A solicitação para adotar o(a) ${nomeAnimal} foi enviada. Aguarde retorno da Patinhas Unidas!`,
+    );
 
     formAdocaoModal.reset();
 
@@ -140,7 +145,9 @@ const formDoacao = document.querySelector("#formDoacao");
 if (formDoacao) {
   formDoacao.addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("Solicitação de doação enviada com sucesso. Aguarde retorno da Patinhas Unidas!");
+    alert(
+      "Solicitação de doação enviada com sucesso. Aguarde retorno da Patinhas Unidas!",
+    );
     e.target.reset();
   });
 }
