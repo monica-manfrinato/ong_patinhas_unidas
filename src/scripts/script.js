@@ -14,11 +14,41 @@ class Animal {
 }
 
 const animais = [
-  new Animal("Floquinho", "Cachorro", "2 anos", "images/floquinho.jpg", "Dócil, brincalhão e vacinado."),
-  new Animal("Chovinista", "Porco", "3 anos", "images/chovinista.jpg", "Muito limpinho e sociável."),
-  new Animal("Mingau", "Gato", "2 anos", "images/mingau.jpg", "Calmo, adorável e castrado."),
-  new Animal("Monicão", "Cachorro", "3 anos", "images/monicao.jpg", "Protetor, cheio de energia e carinhoso."),
-  new Animal("Bidu", "Cachorro", "4 anos", "images/bidu.jpg", "Muito esperto, obediente e amigável.")
+  new Animal(
+    "Bidu",
+    "Cachorro",
+    "4 anos",
+    "src/images/bidu.jpg",
+    "Muito esperto, obediente e amigável.",
+  ),
+  new Animal(
+    "Chovinista",
+    "Porco",
+    "3 anos",
+    "src/images/chovinista.jpg",
+    "Muito limpinho e sociável.",
+  ),
+  new Animal(
+    "Floquinho",
+    "Cachorro",
+    "2 anos",
+    "src/images/floquinho.jpg",
+    "Dócil, brincalhão e vacinado.",
+  ),
+  new Animal(
+    "Mingau",
+    "Gato",
+    "2 anos",
+    "src/images/mingau.jpg",
+    "Calmo, adorável e castrado.",
+  ),
+  new Animal(
+    "Monicão",
+    "Cachorro",
+    "3 anos",
+    "src/images/monicao.jpg",
+    "Protetor, cheio de energia e carinhoso.",
+  ),
 ];
 
 function criarCard(animal) {
@@ -49,7 +79,8 @@ function criarCard(animal) {
   // Preenche o modal ao clicar em "Mais informações"
   const btnInfo = card.querySelector("button");
   btnInfo.addEventListener("click", () => {
-    document.querySelector("#modalTitulo").innerText = `Conheça o(a) ${animal.nome}`;
+    document.querySelector("#modalTitulo").innerText =
+      `Conheça o(a) ${animal.nome}`;
     document.querySelector("#modalCorpo").innerHTML = `
       <img src="${animal.imagem}" class="img-fluid rounded mb-3 w-100" alt="${animal.nome}">
       <p><strong>Espécie:</strong> ${animal.especie}</p>
