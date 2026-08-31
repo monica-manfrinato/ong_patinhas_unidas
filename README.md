@@ -111,16 +111,6 @@ ong-patinhas-unidas/
 
 ---
 
-## 🤝 Como Contribuir
-
-1. Faça um **Fork** do projeto.
-2. Crie uma **Branch** para sua funcionalidade (`git checkout -b feature/nova-funcionalidade`).
-3. Faça o **Commit** de suas alterações (`git commit -m 'Adiciona nova funcionalidade'`).
-4. Faça o **Push** para a Branch (`git push origin feature/nova-funcionalidade`).
-5. Abra um **Pull Request**.
-
----
-
 ## 📄 Licença
 
 Este projeto é desenvolvido para fins educacionais e sociais.
