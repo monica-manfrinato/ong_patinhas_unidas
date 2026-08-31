@@ -1,0 +1,24 @@
+{
+  "name": "ong_patinhas_unidas",
+  "version": "1.0.0",
+  "description": "Repositório criado para o desenvolvimento da somativa Front-end frameworks CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monica-manfrinato/ong_patinhas_unidas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/monica-manfrinato/ong_patinhas_unidas/issues"
+  },
+  "homepage": "https://github.com/monica-manfrinato/ong_patinhas_unidas#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
