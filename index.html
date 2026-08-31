@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ONG Patinhas Unidas</title>
 
+    <!-- Link que importa o bootstrap após a instalação -->
     <link
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css" 
     />
     <link rel="stylesheet" href="./src/styles/style.css" />
   </head>
@@ -18,34 +19,33 @@
       <div class="container">
         <a class="navbar-brand fw-bold" href="#">🐾 ONG Patinhas Unidas</a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler" 
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#menu"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Navebar responsiva (menu sanduíche) -->
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-white" href="#containerAnimais">Animais disponíveis</a>
+              <a class="nav-link text-white fw-bold" href="#containerAnimais">Animais disponíveis</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#doacao">Nos ajude!</a>
+              <a class="nav-link text-white fw-bold" href="#doacao">Nos ajude!</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Conteúdo Principal -->
+    <!-- Conteúdo Principal, onde aparecerão os cards adicionados pelo script.js -->
     <main class="container my-5 pt-5">
       <h2 class="text-center fw-bold mb-4">Nossos animaizinhos</h2>
 
-      <div
-        class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-3"
-        id="containerAnimais"
-      >
+      <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-3" id="containerAnimais">
       </div>
 
       <!-- Seção de Doações -->
@@ -54,6 +54,7 @@
           <div class="col-12 col-md-8 col-lg-6">
             <h2 class="text-center fw-bold mb-4">Faça uma Doação!</h2>
 
+            <!-- Formulário de doação (campos) -->
             <form id="formDoacao">
               <div class="mb-3">
                 <label class="form-label" for="nomeDoador">Nome</label>

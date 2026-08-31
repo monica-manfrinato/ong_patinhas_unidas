@@ -95,7 +95,7 @@ if (container) {
   animais.forEach((animal) => container.appendChild(criarCard(animal)));
 }
 
-// 2. Transição do Modal (Das informações para o Formulário)
+// 2. Transição do Modal (Das informações para o Formulário de adoção)
 const btnQueroAdotar = document.querySelector("#btnQueroAdotar");
 if (btnQueroAdotar) {
   btnQueroAdotar.addEventListener("click", () => {
