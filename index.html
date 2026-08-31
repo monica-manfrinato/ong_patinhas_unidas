@@ -13,7 +13,8 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg bg-danger navbar-dark">
+    <!-- Menu Navegação Fixa -->
+    <nav class="navbar navbar-expand-lg bg-danger navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#">🐾 ONG Patinhas Unidas</a>
         <button
@@ -27,15 +28,18 @@
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Animais disponíveis</a>
-            <a class="nav-link text-white" href="#">Nos ajude!</a>
+              <a class="nav-link text-white" href="#containerAnimais">Animais disponíveis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#doacao">Nos ajude!</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <main class="container my-5">
+    <!-- Conteúdo Principal -->
+    <main class="container my-5 pt-5">
       <h2 class="text-center fw-bold mb-4">Nossos animaizinhos</h2>
 
       <div
@@ -44,20 +48,20 @@
       >
       </div>
 
-      <section class="container my-5">
+      <!-- Seção de Doações -->
+      <section class="container my-5" id="doacao">
         <div class="row justify-content-center">
           <div class="col-12 col-md-8 col-lg-6">
             <h2 class="text-center fw-bold mb-4">Faça uma Doação!</h2>
 
-            <form>
-
+            <form id="formDoacao">
               <div class="mb-3">
-                <label class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nomeDoador" />
+                <label class="form-label" for="nomeDoador">Nome</label>
+                <input type="text" class="form-control" id="nomeDoador" placeholder="Digite seu nome completo" required />
               </div>
 
               <div class="mb-3">
-                <label class="form-label">Tipo de doação</label>
+                <label class="form-label" for="selectDoacao">Tipo de doação</label>
                 <select class="form-select" id="selectDoacao">
                   <option>Alimento</option>
                   <option>Roupinhas</option>
@@ -67,15 +71,16 @@
               </div>
 
               <div class="mb-3">
-                <label class="form-label">Email para contato</label>
-                <input type="email" class="form-control" id="emailDoador" />
+                <label class="form-label" for="emailDoador">Email para contato</label>
+                <input type="email" class="form-control" id="emailDoador" placeholder="seu@email.com" required />
               </div>
 
               <div class="mb-3">
-                <label class="form-label">Telefone para contato</label>
-                <input type="tel" class="form-control" id="telefoneDoador" />
+                <label class="form-label" for="telefoneDoador">Telefone para contato</label>
+                <input type="tel" class="form-control" id="telefoneDoador" placeholder="(00) 00000-0000" required />
               </div>
-              <button type="button" class="btn btn-danger w-100" id="btnEnviar">
+              
+              <button type="submit" class="btn btn-danger w-100" id="btnEnviar">
                 Enviar solicitação de doação
               </button>
             </form>
@@ -84,7 +89,7 @@
       </section>
     </main>
 
-    <!-- Modal do Bootstrap (janela popup do pedido) -->
+    <!-- Modal de Adoção -->
     <div class="modal fade" id="modalAdocao" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -92,20 +97,43 @@
             <h5 class="modal-title fw-bold" id="modalTitulo">Confirmar Adoção</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
           </div>
-          <div class="modal-body" id="modalCorpo">
-          </div>
+          <div class="modal-body">
+            <!-- Passo 1: Informações do Pet -->
+            <div id="passoInfo">
+              <img id="modalImg" src="" class="img-fluid rounded mb-3 w-100" alt="Foto do animal">
+              <p><strong>Espécie:</strong> <span id="modalEspecie"></span></p>
+              <p><strong>Idade:</strong> <span id="modalIdade"></span></p>
+              <p><strong>Sobre:</strong> <span id="modalDescricao"></span></p>
+              <button type="button" class="btn btn-success w-100 mt-2 fw-bold" id="btnQueroAdotar">
+                Quero adotar!
+              </button>
+            </div>
 
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-danger" id="btnConfirmarPedidoModal" data-bs-dismiss="modal">Quero adotar!</button>          
-        </div>
+            <!-- Passo 2: Formulário de Adoção (Oculto inicialmente) -->
+            <form id="formAdocaoModal" class="d-none">
+              <div class="mb-3">
+                <label class="form-label fw-bold" for="nomeAdotante">Seu Nome</label>
+                <input type="text" class="form-control" id="nomeAdotante" placeholder="Digite seu nome completo" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-bold" for="emailAdotante">E-mail</label>
+                <input type="email" class="form-control" id="emailAdotante" placeholder="seu@email.com" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-bold" for="telAdotante">Telefone / WhatsApp</label>
+                <input type="tel" class="form-control" id="telAdotante" placeholder="(00) 00000-0000" required>
+              </div>
+              <button type="submit" class="btn btn-danger w-100 fw-bold">
+                Enviar Solicitação de Adoção
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- JS do Bootstrap para fazer o menu hambúrguer e o Modal funcionarem -->
+    <!-- Scripts do Bootstrap e App -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Seu arquivo JavaScript para carregar os cards e lógica do modal -->
-<script src="./src/scripts/script.js"></script>  </body>
-
+    <script src="./src/scripts/script.js"></script>
+  </body>
 </html>
