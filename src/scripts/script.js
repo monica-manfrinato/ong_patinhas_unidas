@@ -39,7 +39,7 @@ function criarCard(animal) {
       <button 
         class="btn btn-outline-danger w-100" 
         data-bs-toggle="modal" 
-        data-bs-target="#modalPedido"
+        data-bs-target="#modalAdocao"
       >
         Mais informações
       </button>
